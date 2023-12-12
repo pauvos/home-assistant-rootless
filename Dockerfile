@@ -1,4 +1,4 @@
-FROM debian:bookworm-20231120
+FROM debian:bookworm-20231120@sha256:133a1f2aa9e55d1c93d0ae1aaa7b94fb141265d0ee3ea677175cdb96f5f990e5
 
 RUN apt update \
  && apt-get install -y python3 python3-dev python3-venv python3-pip bluez libffi-dev libssl-dev libjpeg-dev zlib1g-dev \

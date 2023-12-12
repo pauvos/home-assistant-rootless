@@ -2,8 +2,7 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     ":dependencyDashboard",
-    ":semanticPrefixFixDepsChoreOthers",
-    "docker:pinDigests"
+    ":semanticPrefixFixDepsChoreOthers"
   ],
   "separateMinorPatch": true,
   "regexManagers": [

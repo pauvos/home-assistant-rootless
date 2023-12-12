@@ -1,8 +1,8 @@
 FROM debian:bookworm-20231120
 
 RUN apt update \
- && apt-get install -y python3 python3-dev python3-venv python3-pip bluez libffi-dev libssl-dev libjpeg-dev zlib1g-dev autoconf build-essential libopenjp2-7 libtiff6 libturbojpeg0-dev tzdata ffmpeg liblapack3 liblapack-dev libatlas-base-dev \
-    libpq-dev \
+ && apt-get install -y python3 python3-dev python3-venv python3-pip bluez libffi-dev libssl-dev libjpeg-dev zlib1g-dev \
+    autoconf build-essential libopenjp2-7 libtiff6 libturbojpeg0-dev tzdata ffmpeg liblapack3 liblapack-dev libatlas-base-dev libpq-dev \
  && rm -rf /var/cache/apt /var/lib/apt/lists
 
 RUN useradd -rm homeassistant \
@@ -15,7 +15,8 @@ CMD ["/srv/homeassistant/bin/hass", "--skip-pip"]
 
 WORKDIR /srv/homeassistant
 
-ENV HOME_ASSISTANT_VERSION=2023.12.1
+# renovate: datasource=github-release depName=home-assistant/core
+ARG HOME_ASSISTANT_VERSION=2023.12.1
 
 ADD --chown=homeassistant:homeassistant \
     https://raw.githubusercontent.com/home-assistant/core/${HOME_ASSISTANT_VERSION}/requirements.txt \

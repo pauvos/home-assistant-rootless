@@ -2,7 +2,7 @@
 
 [![Build docker image](https://github.com/pauvos/home-assistant-rootless/actions/workflows/build-image.yml/badge.svg)](https://github.com/pauvos/home-assistant-rootless/actions/workflows/build-image.yml)
 
-Builds a [home-assistant/core](https://github.com/home-assistant/core) docker image **without s6 proceess manager** but with all **pip dependencies pre-installed**.
+Builds a [home-assistant/core](https://github.com/home-assistant/core) docker image **without s6 process manager** but with all **pip dependencies pre-installed**.
 
 ## Why?
 

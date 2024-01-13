@@ -16,7 +16,7 @@ CMD ["/srv/homeassistant/bin/hass", "--skip-pip"]
 WORKDIR /srv/homeassistant
 
 # renovate: datasource=github-releases depName=home-assistant/core
-ARG HOME_ASSISTANT_VERSION=2024.1.2
+ARG HOME_ASSISTANT_VERSION=2024.1.3
 
 ADD --chown=homeassistant:homeassistant \
     https://raw.githubusercontent.com/home-assistant/core/${HOME_ASSISTANT_VERSION}/requirements.txt \

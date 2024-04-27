@@ -1,4 +1,4 @@
-FROM debian:bookworm-20231120-slim
+FROM debian:12.5-slim
 
 RUN apt update \
  && apt-get install -y python3 python3-dev python3-venv python3-pip bluez libffi-dev libssl-dev libjpeg-dev zlib1g-dev \
@@ -16,7 +16,7 @@ CMD ["/srv/homeassistant/bin/hass", "--skip-pip"]
 WORKDIR /srv/homeassistant
 
 # renovate: datasource=github-releases depName=home-assistant/core
-ARG HOME_ASSISTANT_VERSION=2024.2.1
+ARG HOME_ASSISTANT_VERSION=2024.4.4
 
 ADD --chown=homeassistant:homeassistant \
     https://raw.githubusercontent.com/home-assistant/core/${HOME_ASSISTANT_VERSION}/requirements.txt \

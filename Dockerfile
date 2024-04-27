@@ -27,7 +27,8 @@ USER homeassistant
 
 RUN python3 -m venv . \
  && . bin/activate \
- && python3 -m pip install wheel psycopg2 \
+ && python3 -m pip install wheel \
+ && python3 -m pip install psycopg2 \
  && pip3 install homeassistant==${HOME_ASSISTANT_VERSION} \
  && ln -s lib/python3.11/site-packages/homeassistant homeassistant \
  && pip3 install -r requirements_all.txt

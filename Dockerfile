@@ -1,8 +1,9 @@
 FROM python:3.12-slim-bookworm
 
 RUN apt update \
- && apt-get install -y python3 python3-dev python3-venv python3-pip bluez libffi-dev libssl-dev libjpeg-dev zlib1g-dev \
-    autoconf build-essential libopenjp2-7 libtiff6 libturbojpeg0-dev tzdata ffmpeg liblapack3 liblapack-dev libatlas-base-dev libpq-dev \
+ && apt-get install -y \
+    build-essential \
+    libpq-dev \
  && rm -rf /var/cache/apt /var/lib/apt/lists
 
 RUN useradd -rm homeassistant \

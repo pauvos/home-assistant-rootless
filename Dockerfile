@@ -1,4 +1,4 @@
-FROM python:3.12-slim-bookworm
+FROM python:3.12-bookworm
 
 RUN apt update \
  && apt-get install -y \

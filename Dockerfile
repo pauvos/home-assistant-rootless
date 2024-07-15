@@ -4,6 +4,7 @@ RUN apt update \
  && apt-get install -y \
     build-essential \
     libpq-dev \
+    ffpmeg \
  && rm -rf /var/cache/apt /var/lib/apt/lists
 
 RUN useradd -rm homeassistant \

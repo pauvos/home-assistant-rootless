@@ -19,7 +19,7 @@ WORKDIR /srv/homeassistant
 
 ENV UV_SYSTEM_PYTHON=true \
     UV_NO_CACHE=true \
-    UV_HTTP_TIMEOUT=60s
+    UV_HTTP_TIMEOUT=60
 
 # renovate: datasource=github-releases depName=home-assistant/core
 ARG HOME_ASSISTANT_VERSION=2025.9.4

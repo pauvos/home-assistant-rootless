@@ -1,4 +1,4 @@
-FROM python:3.13-bookworm@sha256:5497231b2ab6ce2a9497ec4b71c157d708b623ddd159f516babec1cf2f8d84b1
+FROM python:3.13-bookworm@sha256:61628530aa48b3381113c3548e68a66a13bcc60b2e1e00a7fe55d6c772442420
 
 RUN apt update \
  && apt-get install -y \
